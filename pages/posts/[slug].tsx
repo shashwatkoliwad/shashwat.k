@@ -1,13 +1,13 @@
+import { Feed } from 'feed';
+import { writeFileSync } from 'fs';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import { useMemo } from 'react';
 
 import { components } from '@/components/MDXComponents';
 import { PostPage } from '@/components/PostPage';
-import { getAllPostsMeta, getPost } from '@/utils/loadMDX';
-import { Feed } from 'feed';
-import { writeFileSync } from 'fs';
 import Tweet from '@/components/Tweet';
+import { getAllPostsMeta, getPost } from '@/utils/loadMDX';
 import { getTweets } from '@/utils/twitter';
 
 const generateRSSFeed = (posts: PostMeta[]) => {
@@ -15,9 +15,9 @@ const generateRSSFeed = (posts: PostMeta[]) => {
 
   const baseUrl = 'https://zhenghao.io';
   const author = {
-    name: 'Zhenghao He',
-    email: 'zhenghaohe17@gmail.com',
-    link: 'https://twitter.com/he_zhenghao'
+    name: 'Shashwat K',
+    email: 'koliwad96@gmail.com',
+    link: 'https://twitter.com/shash__wat'
   };
 
   // Construct a new Feed object
@@ -71,21 +71,21 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context: GetStaticPropsContext) => {
   const slug = context.params?.slug as string;
   const post = await getPost(slug);
-  
+
   const tweets = await getTweets(post.tweetIDs);
-  
-  return { props: { ...post, tweets} };
+
+  return { props: { ...post, tweets } };
 };
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-export const Post: React.FC<Props> = ({ meta, code, tweets }) => {  
+export const Post: React.FC<Props> = ({ meta, code, tweets }) => {
   const StaticTweet = ({ id }) => {
     const tweet = tweets.find((tweet) => tweet.id === id);
-    
+
     return <Tweet {...tweet} />;
   };
-  
+
   const Component = useMemo(() => getMDXComponent(code), [code]);
   return (
     <PostPage meta={meta}>

@@ -1,6 +1,4 @@
-# [zhenghao.io](https://zhenghao.io)
-
-Source code for my personal website and blog [zhenghao.io](https://zhenghao.io).
+<!-- Source code for my personal website and blog [zhenghao.io](https://zhenghao.io). -->
 
 ## built with
 
@@ -12,4 +10,4 @@ Source code for my personal website and blog [zhenghao.io](https://zhenghao.io).
 - [prettier](https://github.com/prettier/prettier)
 - [eslint](https://eslint.org/)
 
-inspired by [Arpit](https://heyitsarpit.dev/).
+inspired by [Zhenghao.io](https://zhenghao.io/).

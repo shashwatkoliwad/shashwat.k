@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { RSSIcon } from './RssIcon';
+
 import { DocSearch } from './DocSearch';
-
-import ThemeSwitch from './ThemeSwitch';
+import { RSSIcon } from './RssIcon';
 import { useTags } from './tags/TagsContext';
+import ThemeSwitch from './ThemeSwitch';
 
-const routes = [
-  { route: '/posts', title: 'posts' },
-];
+const routes = [{ route: '/posts', title: 'posts' }];
 
 const Nav: React.FC = () => {
   const router = useRouter();
@@ -39,8 +37,7 @@ const Nav: React.FC = () => {
               <Link key={route} href={route}>
                 <a
                   className={`capitalize ${isActive(route) ? '' : 'opacity-50'}`}
-                  onClick={resetTags}
-                  >
+                  onClick={resetTags}>
                   {title}
                 </a>
               </Link>
@@ -56,14 +53,14 @@ const Nav: React.FC = () => {
 };
 
 function LocalTime() {
-  const TimeFomatter = new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Canada/Pacific',
+  const TimeFomatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Kolkata',
     hour: 'numeric',
     minute: 'numeric',
     weekday: 'short',
     hour12: false
   }).format();
-  return <span>{TimeFomatter}, Seattle</span>;
+  return <span>{TimeFomatter}, Bengaluru</span>;
 }
 
 export default Nav;

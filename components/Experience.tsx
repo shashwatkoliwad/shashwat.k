@@ -4,71 +4,54 @@ import { a11yDate, visibleDate } from '@/utils/date';
 
 const experience = [
   {
-    company: 'DocuSign',
-    location: 'Seattle',
-    position: 'Team Lead',
-    startDate: 'Mar, 2023',
+    company: 'Betterplace',
+    location: 'Bengaluru',
+    position: 'SDE-2',
+    startDate: 'Sep, 2021',
     endDate: 'present',
     details: (
       <>
         <p>
-          Joined the Product-Led Growth e-commerce team, managing a team of 6 engineers, delivering
-          vital, friction-less purchasing experiences for DocuSign customers across our self-serve
-          eco-system.
+          Working with one of the biggest SaaS companies for blue-collar employee management.
+          Leading front-end development for multiple modules of the product. Mentored couple of
+          juniors in picking-up the product development.
         </p>
         <p>
-          Tech stack: Next.js, React, Node.js, TypeScript, Tailwind CSS, Webpack, Playwright,
-          Optimizely, GraphQL, Apollo Client, REST APIs, Azure, Contentful
+          Tech stack: React, Node.js, TypeScript, SCSS, Webpack, Java, REST APIs, Vert.x. MongoDB
         </p>
       </>
     )
   },
   {
-    company: 'Instacart',
-    location: 'Seattle',
+    company: 'GeekyAnts',
+    location: 'Bengaluru',
     position: 'Senior Software Engineer',
-    startDate: 'June, 2021',
-    endDate: 'Jan, 2023',
+    startDate: 'Feb, 2020',
+    endDate: 'Aug, 2021',
     details: (
       <>
         <p>
-          Joined the pick-up team as the frontend tech lead and worked on the Retailer Platform
-          Portal - an enterprise dashboard where the retailers manage their catalogs, pick-up
-          staffing and scheduling, as well as to view analytics around various business metrics.
+          Developed a sophisticated canvas editor for short video ads using React TypeScript,
+          Anime.js, and Fabric.js. Implemented multi-JWT based authentication for seamless user
+          login and client-switching.
         </p>
-        <p>Tech stack: React, TypeScript, GraphQL, Apollo, Ruby on Rails</p>
+        <p>Tech stack: React, TypeScript, AnimeJS, FabricJS</p>
       </>
     )
   },
   {
-    company: 'Amazon Web Services',
-    location: 'Vancouver',
-    position: 'Front End Engineer',
-    startDate: 'June, 2020',
-    endDate: 'May, 2021',
-    details: (
-      <>
-        <p>
-          Worked on AWS IoT Console, a web platform where our customers can collect, organize, and
-          monitor data from industrial equipment at scale to make better, data-driven decisions.
-        </p>
-        <p>Tech stack: React, Angular, TypeScript, AWS, React Query, single-spa</p>
-      </>
-    )
-  },
-  {
-    company: 'Arista Networks',
-    location: 'Vnacouver',
+    company: 'AriveGuru',
+    location: 'Bengaluru',
     position: 'Software Engineer',
-    startDate: 'Sep, 2018',
-    endDate: 'May, 2020',
+    startDate: 'June, 2019',
+    endDate: 'Jan, 2020',
     details: (
       <>
         <p>
-          Worked on CloudVision Platform, a webapp which monitors data center networks’ hierarchy
-          and performance.
+          Played a key role in developing an internal application for a major tech company. Built
+          newsletter application, working on both front-end and backend.
         </p>
-        <p>Tech stack: TypeScript, React/Redux, D3.js, WebSockets</p>
+        <p>Tech stack: React, Redux-Saga, Express, single-spa</p>
       </>
     )
   }

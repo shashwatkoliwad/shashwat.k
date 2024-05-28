@@ -9,25 +9,25 @@ const Images = () => {
     <>
       {images.map((image, i) => {
         return (
-        <div
-          key={image.src}
-          style={{ order: (i % 12) + 1 }}
-          className={`flex ${
-            image.width / image.height > 1.5
-              ? 'md:w-8/12 lg:w-6/12 2xl:w-5/12'
-              : 'md:w-6/12 lg:w-4/12 2xl:w-3/12'
-          } w-full p-2 mx-4 my-8 md:mx-12 md:my-16 dark:bg-white bg-gray-100 relative z-10 shadow-2xl`}>
-          <Image
-            src={image}
-            alt="art"
-            placeholder="blur"
-            objectFit="contain"
-            className="z-10"
-            priority
-            blurDataURL={image.blurDataURL}
-          />
+          <div
+            key={image.src}
+            style={{ order: (i % 12) + 1 }}
+            className={`flex ${
+              image.width / image.height > 1.5
+                ? 'md:w-8/12 lg:w-6/12 2xl:w-5/12'
+                : 'md:w-6/12 lg:w-4/12 2xl:w-3/12'
+            } w-full p-2 mx-4 my-8 md:mx-12 md:my-16 dark:bg-white bg-gray-100 relative z-10 shadow-2xl`}>
+            <Image
+              src={image}
+              alt="art"
+              placeholder="blur"
+              objectFit="contain"
+              className="z-10"
+              priority
+              blurDataURL={image.blurDataURL}
+            />
 
-          {/* <div className="absolute z-0 scale-110 opacity-50 saturate-[4] blur-3xl">
+            {/* <div className="absolute z-0 scale-110 opacity-50 saturate-[4] blur-3xl">
             <Image
               src={image}
               alt="art"
@@ -37,8 +37,9 @@ const Images = () => {
               blurDataURL={image.blurDataURL}
             />
           </div> */}
-        </div>
-      )})}
+          </div>
+        );
+      })}
     </>
   );
 };

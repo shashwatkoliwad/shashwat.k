@@ -11,8 +11,6 @@ import { MyPic } from '@/components/MyPic';
 import { Spacer } from '@/components/Spacer';
 import { getAllPostsMeta, loadMDX } from '@/utils/loadMDX';
 
-import { PostPreviewList } from './posts';
-
 export const getStaticProps = async () => {
   const file = path.resolve(process.cwd(), 'content', 'home.mdx');
   const source = fs.readFileSync(file, 'utf-8');
@@ -37,6 +35,6 @@ export default function Home({ code, posts }: Props) {
   );
 }
 
-function Stuff({ posts }) {
-  return <code>{JSON.stringify(posts)}</code>;
-}
+// function Stuff({ posts }) {
+//   return <code>{JSON.stringify(posts)}</code>;
+// }

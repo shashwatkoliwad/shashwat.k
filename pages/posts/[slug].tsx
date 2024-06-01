@@ -13,7 +13,7 @@ import { getTweets } from '@/utils/twitter';
 const generateRSSFeed = (posts: PostMeta[]) => {
   const date = new Date();
 
-  const baseUrl = 'https://zhenghao.io';
+  const baseUrl = 'https://shashwatk.xyz';
   const author = {
     name: 'Shashwat K',
     email: 'koliwad96@gmail.com',
@@ -22,9 +22,8 @@ const generateRSSFeed = (posts: PostMeta[]) => {
 
   // Construct a new Feed object
   const feed = new Feed({
-    title: "Zhenghao's blog",
-    description:
-      'You can find me talking about topics related to JavaScript, TypeScript, React, Web development and technical/coding interviews',
+    title: "Shashwat's Blog",
+    description: 'I build front-end applications with JS, React, Typescript.',
     id: baseUrl,
     link: baseUrl,
     language: 'en',
